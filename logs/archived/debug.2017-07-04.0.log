@@ -1,0 +1,159 @@
+2017-07-04 09:58:47 - Starting IntegradoricarrosApplication on vinicius-desktop with PID 26656 (/home/vinicius/desenv/workspace/microservices/integrador-icarros/build/classes/main started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 09:58:47 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 09:58:47 - No active profile set, falling back to default profiles: default
+2017-07-04 09:58:49 - Started IntegradoricarrosApplication in 2.639 seconds (JVM running for 2.903)
+2017-07-04 15:53:07 - Starting SyncAnuncioTests on vinicius-desktop with PID 2910 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:53:07 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:53:07 - No active profile set, falling back to default profiles: default
+2017-07-04 15:53:10 - Started SyncAnuncioTests in 2.908 seconds (JVM running for 3.732)
+2017-07-04 15:55:45 - Starting AuthTests on vinicius-desktop with PID 3068 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:55:45 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:55:45 - No active profile set, falling back to default profiles: default
+2017-07-04 15:55:47 - Started AuthTests in 2.783 seconds (JVM running for 3.268)
+2017-07-04 15:57:04 - Starting IntegradoricarrosApplication on vinicius-desktop with PID 3446 (/home/vinicius/desenv/workspace/microservices/integrador-icarros/build/classes/main started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:57:04 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:57:04 - No active profile set, falling back to default profiles: default
+2017-07-04 15:57:06 - Started IntegradoricarrosApplication in 2.696 seconds (JVM running for 3.002)
+2017-07-04 15:58:18 - Starting SyncAnuncioTests on vinicius-desktop with PID 3549 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:58:18 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:58:18 - No active profile set, falling back to default profiles: default
+2017-07-04 15:58:20 - Started SyncAnuncioTests in 2.86 seconds (JVM running for 3.393)
+2017-07-04 15:58:49 - Starting SyncAnuncioTests on vinicius-desktop with PID 3643 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:58:49 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:58:49 - No active profile set, falling back to default profiles: default
+2017-07-04 15:58:52 - Started SyncAnuncioTests in 3.378 seconds (JVM running for 4.415)
+2017-07-04 15:59:58 - Starting SyncAnuncioTests on vinicius-desktop with PID 3739 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 15:59:58 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 15:59:58 - No active profile set, falling back to default profiles: default
+2017-07-04 16:00:01 - Started SyncAnuncioTests in 3.332 seconds (JVM running for 4.045)
+2017-07-04 16:01:30 - Starting SyncAnuncioTests on vinicius-desktop with PID 3869 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:01:30 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:01:30 - No active profile set, falling back to default profiles: default
+2017-07-04 16:01:33 - Started SyncAnuncioTests in 3.377 seconds (JVM running for 4.081)
+2017-07-04 16:05:53 - Starting SyncAnuncioTests on vinicius-desktop with PID 4006 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:05:53 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:05:53 - No active profile set, falling back to default profiles: default
+2017-07-04 16:05:56 - Started SyncAnuncioTests in 3.199 seconds (JVM running for 3.916)
+2017-07-04 16:06:24 - Starting SyncAnuncioTests on vinicius-desktop with PID 4095 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:06:24 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:06:24 - No active profile set, falling back to default profiles: default
+2017-07-04 16:06:27 - Started SyncAnuncioTests in 3.388 seconds (JVM running for 4.131)
+2017-07-04 16:06:57 - Starting SyncAnuncioTests on vinicius-desktop with PID 4181 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:06:57 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:06:57 - No active profile set, falling back to default profiles: default
+2017-07-04 16:07:00 - Started SyncAnuncioTests in 3.282 seconds (JVM running for 3.955)
+2017-07-04 16:10:19 - Starting SyncAnuncioTests on vinicius-desktop with PID 4305 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:10:19 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:10:19 - No active profile set, falling back to default profiles: default
+2017-07-04 16:10:22 - Started SyncAnuncioTests in 3.272 seconds (JVM running for 3.981)
+2017-07-04 16:10:39 - Starting SyncAnuncioTests on vinicius-desktop with PID 4390 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:10:39 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:10:39 - No active profile set, falling back to default profiles: default
+2017-07-04 16:10:42 - Started SyncAnuncioTests in 3.334 seconds (JVM running for 4.014)
+2017-07-04 16:24:45 - Starting SyncAnuncioTests on vinicius-desktop with PID 4669 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:24:45 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:24:45 - No active profile set, falling back to default profiles: default
+2017-07-04 16:24:46 - Starting IntegradoricarrosApplication on vinicius-desktop with PID 3446 (/home/vinicius/desenv/workspace/microservices/integrador-icarros/build/classes/main started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:24:46 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:24:46 - No active profile set, falling back to default profiles: default
+2017-07-04 16:24:49 - Started SyncAnuncioTests in 3.869 seconds (JVM running for 4.54)
+2017-07-04 16:26:39 - Starting SyncAnuncioTests on vinicius-desktop with PID 4818 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:26:39 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:26:39 - No active profile set, falling back to default profiles: default
+2017-07-04 16:26:42 - Started SyncAnuncioTests in 3.318 seconds (JVM running for 3.988)
+2017-07-04 16:27:21 - Starting SyncAnuncioTests on vinicius-desktop with PID 4914 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:27:21 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:27:21 - No active profile set, falling back to default profiles: default
+2017-07-04 16:27:24 - Started SyncAnuncioTests in 3.373 seconds (JVM running for 3.99)
+2017-07-04 16:27:38 - Starting SyncAnuncioTests on vinicius-desktop with PID 4996 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:27:38 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:27:38 - No active profile set, falling back to default profiles: default
+2017-07-04 16:27:41 - Started SyncAnuncioTests in 3.317 seconds (JVM running for 3.953)
+2017-07-04 16:28:30 - Starting SyncAnuncioTests on vinicius-desktop with PID 5091 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:28:30 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:28:30 - No active profile set, falling back to default profiles: default
+2017-07-04 16:28:33 - Started SyncAnuncioTests in 3.451 seconds (JVM running for 4.06)
+2017-07-04 16:41:01 - Starting SyncAnuncioTests on vinicius-desktop with PID 5532 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:41:01 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:41:01 - No active profile set, falling back to default profiles: default
+2017-07-04 16:41:04 - Started SyncAnuncioTests in 3.309 seconds (JVM running for 3.932)
+2017-07-04 16:54:08 - Starting SyncAnuncioTests on vinicius-desktop with PID 5843 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:54:08 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:54:08 - No active profile set, falling back to default profiles: default
+2017-07-04 16:54:10 - Started SyncAnuncioTests in 2.835 seconds (JVM running for 3.32)
+2017-07-04 16:55:51 - Starting SyncAnuncioTests on vinicius-desktop with PID 5951 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 16:55:51 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 16:55:51 - No active profile set, falling back to default profiles: default
+2017-07-04 16:55:53 - Started SyncAnuncioTests in 2.947 seconds (JVM running for 3.413)
+2017-07-04 17:08:00 - Starting SyncAnuncioTests on vinicius-desktop with PID 6233 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:08:00 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:08:00 - No active profile set, falling back to default profiles: default
+2017-07-04 17:08:03 - Started SyncAnuncioTests in 2.947 seconds (JVM running for 3.437)
+2017-07-04 17:08:37 - Starting SyncAnuncioTests on vinicius-desktop with PID 6317 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:08:37 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:08:37 - No active profile set, falling back to default profiles: default
+2017-07-04 17:08:40 - Started SyncAnuncioTests in 2.876 seconds (JVM running for 3.365)
+2017-07-04 17:09:17 - Starting SyncAnuncioTests on vinicius-desktop with PID 6403 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:09:17 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:09:17 - No active profile set, falling back to default profiles: default
+2017-07-04 17:09:20 - Started SyncAnuncioTests in 3.396 seconds (JVM running for 4.063)
+2017-07-04 17:27:26 - Starting SyncAnuncioTests on vinicius-desktop with PID 6729 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:27:26 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:27:26 - No active profile set, falling back to default profiles: default
+2017-07-04 17:27:29 - Started SyncAnuncioTests in 2.86 seconds (JVM running for 3.386)
+2017-07-04 17:27:56 - Starting SyncAnuncioTests on vinicius-desktop with PID 6808 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:27:56 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:27:56 - No active profile set, falling back to default profiles: default
+2017-07-04 17:27:58 - Started SyncAnuncioTests in 2.867 seconds (JVM running for 3.36)
+2017-07-04 17:28:26 - Starting SyncAnuncioTests on vinicius-desktop with PID 6890 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:28:26 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:28:26 - No active profile set, falling back to default profiles: default
+2017-07-04 17:28:28 - Started SyncAnuncioTests in 2.811 seconds (JVM running for 3.291)
+2017-07-04 17:34:14 - Starting SyncAnuncioTests on vinicius-desktop with PID 7106 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:34:14 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:34:14 - No active profile set, falling back to default profiles: default
+2017-07-04 17:34:17 - Started SyncAnuncioTests in 2.91 seconds (JVM running for 3.397)
+2017-07-04 17:34:36 - Starting SyncAnuncioTests on vinicius-desktop with PID 7172 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:34:36 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:34:36 - No active profile set, falling back to default profiles: default
+2017-07-04 17:34:39 - Started SyncAnuncioTests in 2.972 seconds (JVM running for 3.472)
+2017-07-04 17:39:37 - Starting SyncAnuncioTests on vinicius-desktop with PID 7328 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:39:37 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:39:37 - No active profile set, falling back to default profiles: default
+2017-07-04 17:39:40 - Started SyncAnuncioTests in 2.873 seconds (JVM running for 3.317)
+2017-07-04 17:55:16 - Starting SyncAnuncioTests on vinicius-desktop with PID 7677 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:55:16 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:55:16 - No active profile set, falling back to default profiles: default
+2017-07-04 17:55:19 - Started SyncAnuncioTests in 2.834 seconds (JVM running for 3.322)
+2017-07-04 17:56:30 - Starting SyncAnuncioTests on vinicius-desktop with PID 7776 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:56:30 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:56:30 - No active profile set, falling back to default profiles: default
+2017-07-04 17:56:33 - Started SyncAnuncioTests in 2.903 seconds (JVM running for 3.41)
+2017-07-04 17:58:01 - Starting SyncAnuncioTests on vinicius-desktop with PID 7879 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 17:58:01 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 17:58:01 - No active profile set, falling back to default profiles: default
+2017-07-04 17:58:03 - Started SyncAnuncioTests in 2.809 seconds (JVM running for 3.265)
+2017-07-04 18:01:32 - Starting SyncAnuncioTests on vinicius-desktop with PID 8022 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:01:32 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:01:32 - No active profile set, falling back to default profiles: default
+2017-07-04 18:01:34 - Started SyncAnuncioTests in 2.88 seconds (JVM running for 3.379)
+2017-07-04 18:20:47 - Starting SyncAnuncioTests on vinicius-desktop with PID 8469 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:20:47 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:20:47 - No active profile set, falling back to default profiles: default
+2017-07-04 18:20:50 - Started SyncAnuncioTests in 2.898 seconds (JVM running for 3.36)
+2017-07-04 18:22:54 - Starting SyncAnuncioTests on vinicius-desktop with PID 8581 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:22:54 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:22:54 - No active profile set, falling back to default profiles: default
+2017-07-04 18:22:57 - Started SyncAnuncioTests in 2.899 seconds (JVM running for 3.382)
+2017-07-04 18:28:25 - Starting SyncAnuncioTests on vinicius-desktop with PID 8740 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:28:25 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:28:25 - No active profile set, falling back to default profiles: default
+2017-07-04 18:28:28 - Started SyncAnuncioTests in 2.836 seconds (JVM running for 3.319)
+2017-07-04 18:34:11 - Starting SyncAnuncioTests on vinicius-desktop with PID 8963 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:34:11 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:34:11 - No active profile set, falling back to default profiles: default
+2017-07-04 18:34:13 - Started SyncAnuncioTests in 2.782 seconds (JVM running for 3.26)
+2017-07-04 18:35:26 - Starting SyncAnuncioTests on vinicius-desktop with PID 9061 (started by vinicius in /home/vinicius/desenv/workspace/microservices/integrador-icarros)
+2017-07-04 18:35:26 - Running with Spring Boot v1.5.3.RELEASE, Spring v4.3.8.RELEASE
+2017-07-04 18:35:26 - No active profile set, falling back to default profiles: default
+2017-07-04 18:35:28 - Started SyncAnuncioTests in 2.794 seconds (JVM running for 3.287)

@@ -1,0 +1,52 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.3.RELEASE'
+	}
+	repositories {
+		jcenter()
+		mavenCentral()
+
+	}
+	dependencies {
+		classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
+
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'com.bmuschko.nexus'
+
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	//mavenLocal()
+
+	maven {
+		url "http://nexus.icarros.com.br/repository/maven-snapshots/"
+	}
+
+}
+configurations {
+	compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	compile("org.springframework.boot:spring-boot-starter-undertow")
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+
+//	compile('br.com.icarros:clientesdk:0.0.1-SNAPSHOT')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+

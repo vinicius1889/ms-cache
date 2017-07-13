@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ms-starter.iml" filepath="$PROJECT_DIR$/ms-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-starter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-starter_main.iml" group="ms-starter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ms-starter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ms-starter_test.iml" group="ms-starter" />
+    </modules>
+  </component>
+</project>
