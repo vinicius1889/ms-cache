@@ -7,9 +7,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-public class IntegradoricarrosApplication {
+public class MsStarterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IntegradoricarrosApplication.class, args);
+		SpringApplication.run(MsStarterApplication.class, args);
 	}
 }

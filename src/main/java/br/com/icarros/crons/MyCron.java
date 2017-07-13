@@ -2,7 +2,7 @@ package br.com.icarros.crons;
 
 
 //@Component
-public class SyncIcarros {
+public class MyCron {
 
 
 //    @Scheduled(cron = "0 0 1 * * ?")
