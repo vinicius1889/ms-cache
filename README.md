@@ -8,6 +8,7 @@ Esse projeto é feito para ser um skelton simples das configuração padrão dos
   - Exemplo de configuração dos Beans
   - Schedule (Crons)
   - Repository
+  - Swagger  
 
 # Importante
 
@@ -17,3 +18,7 @@ Esse projeto é feito para ser um skelton simples das configuração padrão dos
 
 Você também deverá trocar a url do Github:
   - git remote set-url
+  
+Para visualizar o a documentação criada pelo swagger:
+
+http://[server]/[context-path]/swagger-ui.html

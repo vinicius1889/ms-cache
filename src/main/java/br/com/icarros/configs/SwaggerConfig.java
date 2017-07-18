@@ -15,10 +15,10 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.icarros.web"))
-                .paths(PathSelectors.regex("/recog.*"))
-                .build();
+//                .select()
+//                .apis(RequestHandlerSelectors.basePackage("br.com.icarros"))
+//                .paths(PathSelectors.regex("/"))
+//                .build();
     }
 
 }
