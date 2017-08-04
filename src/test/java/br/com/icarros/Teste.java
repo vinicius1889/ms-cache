@@ -1,11 +1,8 @@
 package br.com.icarros;
 
-import br.com.icarros.clientesdk.ICarrosNoAuthServices;
-import br.com.icarros.clientesdk.enums.SegmentoEnum;
-import br.com.icarros.clientesdk.vo.AnuncioVO;
 
+import br.com.icarros.services.JmsReceiver;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,5 +29,14 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class Teste {
+
+    @Autowired
+    private JmsReceiver jmsRec;
+
+
+    @Test
+    public void sayMyName(){
+        this.jmsRec.sendMe("My name is...");
+    }
 
 }

@@ -9,6 +9,7 @@ Esse projeto é feito para ser um skelton simples das configuração padrão dos
   - Schedule (Crons)
   - Repository
   - Swagger  
+  - JMS usando SQS  
 
 # Importante
 

@@ -55,6 +55,13 @@ dependencies {
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'
 
 
+	// https://mvnrepository.com/artifact/org.springframework/spring-jms
+	compile group: 'org.springframework', name: 'spring-jms'
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
+	compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.9.6'
+	// https://mvnrepository.com/artifact/com.amazonaws/amazon-sqs-java-messaging-lib
+	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.3'
+
 
 //	compile('br.com.icarros:clientesdk:0.0.1-SNAPSHOT')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
