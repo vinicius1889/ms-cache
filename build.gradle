@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 buildscript {
 	ext {
 		springBootVersion = '1.5.3.RELEASE'
@@ -28,6 +30,9 @@ repositories {
 	maven {
 		url "http://nexus.icarros.com.br/repository/maven-snapshots/"
 	}
+
+	maven { url 'http://sndyuk.github.com/maven' }
+
 }
 
 ext {
@@ -66,10 +71,25 @@ dependencies {
 //	compile('br.com.icarros:clientesdk:0.0.1-SNAPSHOT')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
+	compile 'org.fluentd:fluent-logger:0.3.2'
+	compile 'com.sndyuk:logback-more-appenders:1.1.1'
 }
 
 dependencyManagement {
 	imports {
 		mavenBom "org.keycloak.bom:keycloak-adapter-bom:${keycloakVersion}"
 	}
+}
+
+
+task icarrosBuild() << {
+	def file = new File("$projectDir/src/main/resources/application.properties")
+
+	file.append("""
+info.app.appName=$appName
+info.app.build=$build
+info.app.branch=$branch
+info.app.date= ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
+				""")
+
 }

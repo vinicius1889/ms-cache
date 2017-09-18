@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
-    <property name="DEV_HOME" value="logs" />
 
+    <property resource="application.properties" />
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <property name="DEV_HOME" value="logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+                ${server.contextPath} %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
             </Pattern>
         </layout>
     </appender>
@@ -15,7 +18,7 @@
         <file>${DEV_HOME}/debug.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+                ${server.contextPath}  %d{yyyy-MM-dd HH:mm:ss} - %msg%n
             </Pattern>
         </encoder>
 
@@ -36,7 +39,7 @@
         <file>${DEV_HOME}/error.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+                ${server.contextPath}  %d{yyyy-MM-dd HH:mm:ss} - %msg%n
             </Pattern>
         </encoder>
 
@@ -52,14 +55,29 @@
 
     </appender>
 
+    <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
+        <tag>${server.contextPath}</tag>
+        <label>normal</label>
+        <remoteHost>${fluentd.host}</remoteHost>
+        <port>${fluentd.port}</port>
+        <maxQueueSize>20</maxQueueSize>
+    </appender>
+
     <!-- Send logs to both console and file audit -->
     <logger name="br.com.icarros" level="debug"
             additivity="false">
-        <appender-ref ref="FILE-AUDIT" />
+        <!--<appender-ref ref="FILE-AUDIT" />-->
         <appender-ref ref="STDOUT" />
+        <appender-ref ref="FLUENT" />
     </logger>
 
     <root level="error">
-        <appender-ref ref="FILE-ERROR" />
+        <!--<appender-ref ref="FILE-ERROR" />-->
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FLUENT" />
     </root>
+
+
+
 </configuration>
+
