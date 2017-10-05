@@ -2,8 +2,15 @@
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
 
     <property resource="application.properties" />
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
+    <springProperty scope="context" name="fluent.host" source="fluentd.host"/>
+
+    <springProperty scope="context" name="fluent.port" source="fluentd.port"/>
+
+    <springProperty scope="context" name="fluent.environment" source="environment"/>
+
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <property name="DEV_HOME" value="logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -57,22 +64,20 @@
 
     <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
         <tag>${server.contextPath}</tag>
-        <label>normal</label>
-        <remoteHost>${fluentd.host}</remoteHost>
-        <port>${fluentd.port}</port>
+        <label>${fluent.environment}</label>
+        <remoteHost>${fluent.host}</remoteHost>
+        <port>${fluent.port}</port>
         <maxQueueSize>20</maxQueueSize>
     </appender>
 
-    <!-- Send logs to both console and file audit -->
+
     <logger name="br.com.icarros" level="debug"
             additivity="false">
-        <!--<appender-ref ref="FILE-AUDIT" />-->
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FLUENT" />
     </logger>
 
     <root level="error">
-        <!--<appender-ref ref="FILE-ERROR" />-->
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FLUENT" />
     </root>
