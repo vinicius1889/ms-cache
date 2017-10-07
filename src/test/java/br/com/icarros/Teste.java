@@ -26,17 +26,16 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class Teste {
-
-    @Autowired
-    private JmsReceiver jmsRec;
 
 
     @Test
-    public void sayMyName(){
-        this.jmsRec.sendMe("My name is...");
+    public void testeCripto(){
+
+        String s = "01234567890a";
+        String replace = s.replaceAll("\\D+", "");
+
+        System.out.println("s s= " + replace);
     }
 
 }
