@@ -1,25 +1,44 @@
-# Default Microservices skelton
+# Microservice Crypto
 
-Esse projeto é feito para ser um skelton simples das configuração padrão dos microserviços com:
+Esse projeto foi desenhado para realizar o hashing do cpf do usuario. Utilizamos
+AES-256-CBC
 
-  - Aspecto
-  - Log (Logback com rotation)
-  - Server Undertown
-  - Exemplo de configuração dos Beans
-  - Schedule (Crons)
-  - Repository
-  - Swagger  
-  - JMS usando SQS  
+-------------
+Ambiente
+-------------
 
-# Importante
-
-  - Por favor, troque o nome do projeto nos arquivos de configuração
-  - Não esqueça de trocar as informações no arquivo de propriedade em src/main/resources
+> - **porta** 5500
+> - **context** /api/crypto
 
 
-Você também deverá trocar a url do Github:
-  - git remote set-url
+-------------
+Variáveis
+-------------
+
+> - environment
+> - encrypt.key= (hex)
+> - encrypt.iv= (hex)
+
+
+-------------
+Run
+-------------
+
+#### Local
+
+Para rodar o projeto localmente, devemos rodar o comando **gradle bootRun**
+
+#### Produção
+
+Para rodar o projeto em produção, devemos usar o comando gradle build.
+O projeto **(.jar)** estará disponível dentro da pasta build/libs.
+
+> - gradle build
+> - java -jar projeto.jar
   
+
+#### Documentação dos serviços
+
 Para visualizar o a documentação criada pelo swagger:
 
 http://[server]/[context-path]/swagger-ui.html
