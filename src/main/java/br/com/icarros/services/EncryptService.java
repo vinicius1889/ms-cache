@@ -10,6 +10,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
+import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -24,6 +25,17 @@ public class EncryptService {
     String iv;
 
     public String encrypt(String str) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+
+        try {
+            Field field = Class.forName("javax.crypto.JceSecurity").
+                    getDeclaredField("isRestricted");
+            field.setAccessible(true);
+            field.set(null, java.lang.Boolean.FALSE);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
         final byte[] secretKey = javax.xml.bind.DatatypeConverter.parseHexBinary(this.key);
         final byte[] initVector = javax.xml.bind.DatatypeConverter.parseHexBinary(this.iv);
         final Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
