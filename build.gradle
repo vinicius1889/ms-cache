@@ -53,10 +53,12 @@ dependencies {
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.keycloak:keycloak-spring-boot-starter')
+
+	compile('org.springframework.security.oauth:spring-security-oauth2:2.2.0.RELEASE')
+
 	compile group: 'org.keycloak', name: 'keycloak-spring-security-adapter', version: '3.2.0.Final'
 	compile group: 'org.keycloak', name: 'keycloak-admin-client', version: '3.2.0.Final'
 	compile group: 'org.keycloak', name: 'keycloak-authz-client', version: '3.2.0.Final'
-
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui

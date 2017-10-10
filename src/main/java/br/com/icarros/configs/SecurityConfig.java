@@ -1,8 +1,10 @@
 package br.com.icarros.configs;
 
+import br.com.icarros.filters.DefaultCorsFilter;
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
+import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
 import org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter;
 import org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter;
@@ -16,23 +18,25 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
+import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.security.web.authentication.preauth.x509.X509AuthenticationFilter;
 import org.springframework.security.web.authentication.session.NullAuthenticatedSessionStrategy;
+import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.security.web.csrf.*;
 
 import br.com.icarros.filters.CsrfHeaderFilter;
+import org.springframework.security.web.session.SessionManagementFilter;
 
 /**
  * Created by
  * User:    menegazzo
  * Date:    08/06/17
  */
-
 @Configuration
 @EnableWebSecurity
-@ComponentScan(basePackageClasses = KeycloakSecurityComponents.class)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Autowired
@@ -40,36 +44,34 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(keycloakAuthenticationProvider());
+        final KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();
+        keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
+        auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
     @Bean
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {
-        return new NullAuthenticatedSessionStrategy();
+        return new RegisterSessionAuthenticationStrategy(new SessionRegistryImpl());
+    }
+
+    @Bean
+    public DefaultCorsFilter corsFilter() {
+        return new DefaultCorsFilter();
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry url =
-                http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                        .sessionAuthenticationStrategy(sessionAuthenticationStrategy())
-                        .and()
-                        .addFilterBefore(keycloakPreAuthActionsFilter(), LogoutFilter.class)
-                        .addFilterBefore(keycloakAuthenticationProcessingFilter(), X509AuthenticationFilter.class)
-                        .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint())
-                        .and()
-                        .authorizeRequests()
-                        .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .anyRequest().authenticated();
-
-        if(env.acceptsProfiles("development")){
-            url.and().csrf().disable();
-        }else {
-            url.and()
-                    .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class)
-                    .csrf().csrfTokenRepository(csrfTokenRepository());
-        }
+        super.configure(http);
+        http
+                .headers().disable()
+                .addFilterBefore(corsFilter(), SessionManagementFilter.class)
+                .authorizeRequests()
+                .antMatchers("/**").permitAll()
+                .antMatchers("/encrypt/**").authenticated()
+                .anyRequest().permitAll()
+                .and()
+                .csrf().disable();
 
     }
 
