@@ -6,6 +6,7 @@ import br.com.icarros.validation.CpfValidation;
 import br.com.icarros.vo.InfoSecVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class EncryptController {
 
     @ApiOperation(value = "Retorna o cpf cifrado do usuário")
     @RequestMapping(value = "/{cpf}",method = RequestMethod.GET)
-    public InfoSecVO encrypt(@PathVariable("cpf") String cpfInformado){
+    public InfoSecVO encrypt(KeycloakAuthenticationToken keyCloack,  @PathVariable("cpf") String cpfInformado){
         Logger logger = LoggerFactory.getLogger(getClass());
         try {
             String cpf = cpfValidation.validation(cpfInformado);
