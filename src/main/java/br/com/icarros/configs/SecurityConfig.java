@@ -67,8 +67,8 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .headers().disable()
                 .addFilterBefore(corsFilter(), SessionManagementFilter.class)
                 .authorizeRequests()
-//                .antMatchers("/**").permitAll()
-                .antMatchers("/**").authenticated()
+                .antMatchers("/**").permitAll()
+                .antMatchers("/encrypt").authenticated()
 //                .anyRequest().permitAll()
                 .and()
                 .csrf().disable();
