@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @CrossOrigin(value = "*")
-@Api(value = "Encrypt de cpfs usando aes-cbc",description = "API de cifragem de cpfs")
-@RequestMapping("/encrypt")
+@Api(value = "API de teste",description = "descrição API de teste")
+@RequestMapping("/teste")
 @RestController
 public class Controller {
 
     @ApiOperation(value = "Testando agora a api de retorno")
-    @RequestMapping(value = "/{cpf}",method = RequestMethod.GET)
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public Map encrypt(KeycloakAuthenticationToken keyCloack) throws Exception {
         throw new Exception("Ainda nao implementado");
     }
