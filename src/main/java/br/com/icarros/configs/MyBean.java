@@ -1,10 +1,8 @@
 package br.com.icarros.configs;
 
-import br.com.icarros.validation.CpfValidation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,9 +26,6 @@ public class MyBean {
     @Bean
     public KeycloakBean createKeycloakbean(){ return new KeycloakBean(); }
 
-    @Scope("prototype")
-    @Bean
-    public CpfValidation createCPFValidation(){ return new CpfValidation(); }
 
 
 }
