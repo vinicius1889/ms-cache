@@ -82,7 +82,5 @@
         <appender-ref ref="FLUENT" />
     </root>
 
-
-
 </configuration>
 

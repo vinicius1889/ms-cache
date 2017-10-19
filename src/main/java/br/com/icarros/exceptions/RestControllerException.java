@@ -1,6 +1,6 @@
 package br.com.icarros.exceptions;
 
-import br.com.icarros.web.EncryptController;
+import br.com.icarros.web.Controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import javax.servlet.http.HttpServletRequest;
 import java.io.Serializable;
 
-@ControllerAdvice(basePackageClasses = EncryptController.class)
+@ControllerAdvice(basePackageClasses = Controller.class)
 public class RestControllerException extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(IllegalArgumentException.class)
