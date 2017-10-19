@@ -62,17 +62,18 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         super.configure(http);
         http
                 .headers().disable()
                 .addFilterBefore(corsFilter(), SessionManagementFilter.class)
                 .authorizeRequests()
-                .regexMatchers("/health").permitAll()
-//                .antMatchers("/**").permitAll()
-//                .antMatchers("/encrypt").authenticated()
-                .anyRequest().authenticated()
+                .antMatchers("/health/**").permitAll()
+                .antMatchers("/**").authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .csrf().disable();
+
 
     }
 
