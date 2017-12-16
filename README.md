@@ -1,22 +1,22 @@
-# Default Microservices skelton
+# Cache simples usando List e Map
 
-Esse projeto é feito para ser um skelton simples das configuração padrão dos microserviços com:
+Esse projeto é desenhado para ser usado como dependência nos projetos que seja necessário uma camada de cache.
 
-  - Aspecto
-  - Log (Logback com fluentd para visualizar no kibana)
-  - Server Undertown
-  - Exemplo de configuração dos Beans
-  - Schedule (Crons)
-  - Repository
-  - Swagger  
-  - JMS usando SQS  
-  - Segurança com keycloak
+Sendo assim, temos que pensar no cache a ser desenvolvido para não termos conflito entre aplicações
 
-# Logs
+Hoje, temos 2 interfaces para cache:
 
-Os logs serão vistos no console e no kibana
+  - List
+  - Map
+  
+  
+# Boas Práticas
 
-# Repositorios
+Podemos ter Maps e Lists compartilhados entre aplicações, sendo assim, devemos manter uma boa comunicação.
+Caso a informação deva ser compartilhada apenas pelas mesmas réplicas, o Enum deve ser mais específico para o get da Interface.
+
+
+# Repositório e gradle.build
 
 Atualmente usamos o nexus como repositorio, sendo assim, devemos colocar uma config
 no projeto para que o gradle realize o upload dos pacotes.
@@ -34,16 +34,25 @@ nexusUsername = seuuser
 nexusPassword = suasenha
 
 
+# Dependência nos projetos
 
-# Importante
-
-  - Por favor, troque o nome do projeto nos arquivos de configuração
-  - Não esqueça de trocar as informações no arquivo de propriedade em src/main/resources
-
-
-Você também deverá trocar a url do Github:
-  - git remote set-url
-
-Para visualizar o a documentação criada pelo swagger:
-
-http://[server]/[context-path]/swagger-ui.html
+  ##gradle.build
+    	compile('br.com.icarros:ms-cache:0.0.1-SNAPSHOT')
+    	compile group: 'com.hazelcast', name: 'hazelcast', version: '3.9.1'
+    	compile group: 'com.hazelcast', name: 'hazelcast-client', version: '3.9.1'
+    	
+    	
+  ##aplication.properties
+        icarros.cluster.cache.name=dev
+        icarros.cluster.cache.pass=dev-pass
+        
+  ##service
+        
+        @Autowired
+        private IcarrosCacheService icarrosCacheService;  	
+    
+  
+  ##exemplo de chamada
+        
+        icarrosCacheService.getList(<ENUM>)
+  	    icarrosCacheService.getList(EnumsCustom.TESTE).addAll(items);
